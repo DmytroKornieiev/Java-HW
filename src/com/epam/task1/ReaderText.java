@@ -28,4 +28,3 @@ public class ReaderText {
         System.out.println("Count of words, which starts with letter 'O':"+collection.size());
     }
 }
-
