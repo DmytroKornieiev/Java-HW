@@ -1,5 +1,8 @@
 package com.epam.task2;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 import org.apache.commons.lang3.RandomStringUtils;
 
 import java.util.ArrayList;
@@ -10,17 +13,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+@Getter
+@Setter
+@ToString
 public class Book {
     String name;
     int price;
-
-    @Override
-    public String toString() {
-        return "Book{" +
-                "name='" + name + '\'' +
-                ", price='" + price + '\'' +
-                '}';
-    }
 
     public Book(String name, int price) {
         this.name = name;
@@ -153,21 +151,5 @@ public class Book {
     @Override
     public int hashCode() {
         return Objects.hash(name, price);
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
     }
 }
